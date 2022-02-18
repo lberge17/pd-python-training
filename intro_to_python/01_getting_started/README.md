@@ -3,7 +3,8 @@
 ## Environment Setup
 
 - [Install Python 3](https://www.python.org/downloads/)
-- [Install PyCharm](https://www.jetbrains.com/pycharm/download/#section=mac)
+- [Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [Install PyCharm (alternative to VSCode)](https://www.jetbrains.com/pycharm/download/#section=mac)
 
 ## Print Statements
 ```python
