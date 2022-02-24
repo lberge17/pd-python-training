@@ -2,7 +2,19 @@
 
 ## Environment Setup
 
-- [Install Python 3](https://www.python.org/downloads/)
+With Homebrew and [Pyenv](https://github.com/pyenv/pyenv) on MacOS
+```bash
+$ brew install pyenv
+$ pyenv global 3.9.10
+$ pyenv versions
+$ echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
+$ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+```
+Close terminal and open a new session.
+```bash
+$ python --version
+```
+
 - [Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - [Install PyCharm (alternative to VSCode)](https://www.jetbrains.com/pycharm/download/#section=mac)
 
