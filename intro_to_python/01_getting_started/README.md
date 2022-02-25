@@ -2,7 +2,7 @@
 
 ## Environment Setup
 
-With Homebrew and [Pyenv](https://github.com/pyenv/pyenv) on MacOS
+With Homebrew and [Pyenv](https://github.com/pyenv/pyenv) on MacOS (using zsh)
 ```bash
 $ brew install pyenv
 $ pyenv global 3.9.10
@@ -14,6 +14,8 @@ Close terminal and open a new session.
 ```bash
 $ python --version
 ```
+
+- [WSL set up](https://www.techtronic.us/install-python-pyenv-on-wsl-ubuntu/) - still untested
 
 - [Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - [Install PyCharm (alternative to VSCode)](https://www.jetbrains.com/pycharm/download/#section=mac)
