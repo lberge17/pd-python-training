@@ -60,3 +60,7 @@ hi
 (Pdb) c
 bye
 ```
+
+## Practice!
+
+I have a test suite generated with some simple tests - you will likely need to google around a bit in order to solve them. Practice using `pdb` as you work through the tests. Code in `using_debugger.py` and run the test suite with `python3 ./intro_to_python/02_debugging_in_python/test.py` or the relative file path to the test suite.
