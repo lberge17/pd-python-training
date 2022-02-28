@@ -43,7 +43,7 @@ x = 10
 name = 'Laura'
 NAME = 'Berge'
 Age = 25
-is_19 = false
+is_19 = False
 x, y, z = 4, 2, 19
 a = b = c = 'hi'
 ```
@@ -107,6 +107,32 @@ del example_tuple # we can delete the tuple itself though
 | is not | returns opposite boolean of is | a is not b |
 
 - Note: I have not included bitwise operators in this table
+
+
+## Falsy values
+
+```python
+None
+False
+# Zeros, including:
+0
+0.0
+0j
+decimal.Decimal(0)
+fraction.Fraction(0, 1)
+# Empty sequences and collections, including:
+[] - an empty list
+{} - an empty dict
+() - an empty tuple
+'' - an empty str
+b'' - an empty bytes
+set() - an empty set
+# an empty range, like 
+range(0)
+# objects for which
+obj.__bool__() returns False
+obj.__len__() returns 0
+```
 
 ## Functions
 - indentation determines end of function ([PEP 8 Python style guide](https://www.python.org/dev/peps/pep-0008/#indentation) says to use 4 spaces for indentation)
