@@ -48,7 +48,7 @@ x, y, z = 4, 2, 19
 a = b = c = 'hi'
 ```
 
-- we can also delete the reference to an object for example
+- we can also delete an object
 - Note: we can't delete an item within a tuple or string since they are immutables (we'll learn about tuples and strings more later)
 
 ```python
