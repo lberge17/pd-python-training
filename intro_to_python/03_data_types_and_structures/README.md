@@ -80,3 +80,12 @@ set("TeachersTeachingTeachers") # => {'T', 'e', 'r', 'i', 'c', 's', 'a', 'g', 'h
 set([6,8,9,3,3]) # => {8, 9, 3, 6}
 set([1, 4, 'hello', 4, 3, 'world'])  # => {1, 3, 4, 'hello', 'world'}
 ```
+
+## Functions
+
+```python
+def some_func():
+    return 'hi'
+
+type(some_func) # => <class 'function'>
+```
