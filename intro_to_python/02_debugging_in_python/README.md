@@ -31,6 +31,7 @@ def some_function():
 - Use `r(eturn)` to execute the rest of the current function until the return value
 - Use `unt(il) [line number]` if you are in an iteration and want to stop hitting the same breakpoint as you iterate but continue running the program. Also can give an optional line number argument and program with run until that line.
 - To print inside debugger, you can use `p 'hello'`
+- To hard exit the program use `Ctrl+Z` if using zsh.
 - [more fun ways to use pdb](https://www.codementor.io/@stevek/advanced-python-debugging-with-pdb-g56gvmpfa)
 
 ```python
