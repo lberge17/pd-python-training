@@ -24,7 +24,7 @@ Laura"""
 # print(greeting1[6:])
 name = 'Laura'
 string = f'Hi my name is: {name}'
-# string = "Hi my name is: {name}".format(name)
+string = "Hi my name is: {}".format(name)
 # print(dir(string))
 # print(help(str))
 # print(help(str.upper))
