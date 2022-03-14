@@ -1,18 +1,22 @@
 # Data Types
 
 ## Numbers
+Immutables.
 
 ### Integer
+
 ```python
 type(26) # => <class 'int'>
 ```
 
 ### Float
+
 ```python
 type(-20.0) # => <class 'float'>
 ```
 
 ### Complex Number
+
 ```python
 # [real] + [imaginary]j
 type(63 + 5j) # => <class 'complex'>
@@ -21,6 +25,7 @@ type(63 + 5j) # => <class 'complex'>
 <hr>
 
 ## Boolean
+
 ```python
 type(True) # => <class 'bool'>
 type(False) # => <class 'bool'>
@@ -29,7 +34,9 @@ type(False) # => <class 'bool'>
 <hr>
 
 ## String
+
 ```python
+# immutable sequence of Unicode code points
 "Hello World"
 'Hello World'
 """Hello World"""
@@ -41,6 +48,8 @@ type(False) # => <class 'bool'>
 ## List
 
 ```python
+# mutable, ordered list
+
 type([]) # => <class 'list'>
 type([{'name': 'Laura'}, {'name': 'Kevin'}]) # => <class 'list'>
 ```
@@ -50,6 +59,9 @@ type([{'name': 'Laura'}, {'name': 'Kevin'}]) # => <class 'list'>
 ## Tuple
 
 ```python
+# immutable sequence of objects.
+# more memory and time efficient than lists
+
 type(()) # => <class 'tuple'>
 type((1, 'hi', 9.0, {}, [], ())) # => <class 'tuple'>
 ```
@@ -59,7 +71,8 @@ type((1, 'hi', 9.0, {}, [], ())) # => <class 'tuple'>
 ## Dictionary
 
 ```python
-# unordered collection of key-value pairs
+# mutable, unordered collection of key-value pairs
+
 type({}) # => <class 'dict'>
 type({1: 'L', 2: 'a', 3: 'u', 4: 'r', 5: 'a'}) # => <class 'dict'>
 type({'name': 'Laura', 'occupation': 'software engineer'}) # => <class 'dict'>
@@ -72,6 +85,8 @@ type({'name': 'Laura', 'occupation': 'software engineer'}) # => <class 'dict'>
 ```python
 # unordered, iterable, and mutable
 # no duplicate items
+# two types: `set` and `frozenset`
+# note: `frozenset`s are actually immutable
 
 type(set()) # => <class 'set'>
 type(type({'h', 'i'})) # => <class 'set'>
@@ -81,9 +96,14 @@ set([6,8,9,3,3]) # => {8, 9, 3, 6}
 set([1, 4, 'hello', 4, 3, 'world'])  # => {1, 3, 4, 'hello', 'world'}
 ```
 
+<hr>
+
 ## Functions
 
 ```python
+# functions are objects in Python
+# can be passed as a callback
+
 def some_func():
     return 'hi'
 
