@@ -91,6 +91,12 @@ end
 
 ## Instance Methods vs Class Methods
 
+---
+
+### Instance Methods
+
+---
+
 Instance methods work the same as in ruby. You can call them on an instance but cannot call them on a class.
 
 ```python
@@ -119,9 +125,51 @@ Instance methods work the same as in ruby. You can call them on an instance but 
 
 - We saved a method into df `df = d.add_trick ` then used it in a while loop later on.
 
+- in fact you can also use define a function outside of a class and use it in the definition.
+
+```python
+def outer_function(self, a, b):
+  return a+b
+
+class C:
+  inner_method = outer_function
+
+  def another_method(self):
+    return "Goodnight World!"
+
+  method_to_method = another_method
+
+>>> a = C()
+>>> a.inner_method(1,2)
+3
+>>> a.another_method()
+'Goodnight World!'
+>>> a.method_to_method()
+'Goodnight World!'
+
+```
+
+- This was pretty cool, until the documentation said this: `"Note that this practice usually only serves to confuse the reader of a program."`
+
+## Lets talk about self
+
 - You may have noticed that when we defined `d.add_trick(self, name)`it requires two arguments, while when we use it above we only pass it one argument `d.add_trick('roll over')`.
-  - The special thing about methods is that the instance object is passed as the first argument in a list of the function.<sup><a href="https://docs.python.org/3/tutorial/classes.html#method-objects">1</a></sup>
+  - The special thing about methods is that the instance object is passed as the first argument in a list of the function.<sup><a href="https://docs.python.org/3/tutorial/classes.html#method-objects">1</a></sup>'
+  - Although the first argument that we pass in this method is called self, this is nothing more than a convention. It is similar to Javascript's event, where the event is automatically passed into the first argument of a function. We only call it self for convention and to make the code more readable.
+
+---
+
+### Class Methods
+
+Unlike ruby where we can set class methods using `self.method_name` for python we have to use a built-in function `classmethod()`.
+
+    Syntax: classmethod(function)
+    Parameters: accepts a function as a parameter
+    Returns: The converted class method.
+
+---
 
 ## Resources
 
-[1. Classes Python Docs](https://docs.python.org/3/tutorial/classes.html)
+1. [Classes Python Docs](https://docs.python.org/3/tutorial/classes.html)
+1. [classmethod() in Python](https://www.geeksforgeeks.org/classmethod-in-python/)
