@@ -54,9 +54,9 @@ end
 > they spring into existence when they are first assigned to.<sup><a href="https://docs.python.org/3/tutorial/classes.html#instance-objects">1</a></sup>
 
 ```python
-    d.age = 12
+    d.age = 5
     d.age
-    => 12
+    => 5
 ```
 
 ## Instance Methods vs Class Methods
@@ -72,7 +72,7 @@ Instance methods work the same as in ruby. You can call them on an instance but 
 
 - The positional argument missing here is 'self' which does not get sent when you use the function on a class.
 
-> Side note: You can save methods in variables.
+> Side note: You can save methods in variables. View the example below!
 
 ```python
     df = d.add_trick
@@ -85,7 +85,12 @@ Instance methods work the same as in ruby. You can call them on an instance but 
     => ['roll over', 'roll over', 'Stand Tall (On Hind Legs)', 'Go and Fetch', 'Sit Pretty', 'Spin', 'Army Crawling', 'Howl', 'Speak', 'Bark', 'Wait']
 ```
 
+> Wow what a well trained dog.
+
 - We saved a method into df `df = d.add_trick ` then used it in a while loop later on.
+
+- You may have noticed that when we defined `d.add_trick(self, name)`it requires two arguments, while when we use it above we only pass it one argument `d.add_trick('roll over')`.
+  - The special thing about methods is that the instance object is passed as the first argument in a list of the function.<sup><a href="https://docs.python.org/3/tutorial/classes.html#method-objects">1</a></sup>
 
 ## Resources
 
