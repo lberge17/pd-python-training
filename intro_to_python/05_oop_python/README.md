@@ -1,6 +1,6 @@
 # Object Oriented Programming With Python
 
-## Constructor | Initialize
+## Creation of a class Python VS Ruby
 
 ```python
 
@@ -49,7 +49,9 @@ end
     e.tricks
 ```
 
-    "Data attributes correspond to “instance variables...Data attributes need not be declared; like local variables, they spring into existence when they are first assigned to.”
+> Data attributes correspond to 'instance variables'...
+> Data attributes need not be declared; like local variables,
+> they spring into existence when they are first assigned to.<sup><a href="https://docs.python.org/3/tutorial/classes.html#instance-objects">1</a></sup>
 
 ```python
     d.age = 12
@@ -57,6 +59,34 @@ end
     => 12
 ```
 
+## Instance Methods vs Class Methods
+
+Instance methods work the same as in ruby. You can call them on an instance but cannot call them on a class.
+
+```python
+    d.add_trick('roll over')
+    => ['roll over', 'roll over']
+    Dog.add_trick('roll over')
+    => TypeError: add_trick() missing 1 required positional argument: 'trick'
+```
+
+- The positional argument missing here is 'self' which does not get sent when you use the function on a class.
+
+> Side note: You can save methods in variables.
+
+```python
+    df = d.add_trick
+    new_tricks = ['Wait', 'Bark', 'Speak', 'Howl', 'Army Crawling', 'Spin', 'Sit Pretty', 'Go and Fetch', 'Stand Tall (On Hind Legs)']
+
+    while len(new_tricks) > 0:
+      df(new_tricks.pop())
+
+    d.tricks
+    => ['roll over', 'roll over', 'Stand Tall (On Hind Legs)', 'Go and Fetch', 'Sit Pretty', 'Spin', 'Army Crawling', 'Howl', 'Speak', 'Bark', 'Wait']
+```
+
+- We saved a method into df `df = d.add_trick ` then used it in a while loop later on.
+
 ## Resources
 
-[Classes Python Docs](https://docs.python.org/3/tutorial/classes.html)
+[1. Classes Python Docs](https://docs.python.org/3/tutorial/classes.html)
