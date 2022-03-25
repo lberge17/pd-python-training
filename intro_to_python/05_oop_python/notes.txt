@@ -5,11 +5,41 @@ Lesson Notes:
 * Start by opening two terminals side by Slides
 * one for python and one for ruby
 
-Use sytax in read me to create a class both for python and ruby
+We might want to consider moving this to two lectures 
+if there are a ton of questions. I anticipate a ton of questions 
+about decorators. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Use syntax in read me to create a class both for python and ruby
 
 Differences: 
     1. Python with the same sort of syntax you dont have to create an attr_accessor for your variables
         1. try d.tricks in python and d.tricks in ruby
+
+
+
+
+
 
 
 --- 
@@ -21,4 +51,5 @@ class mechanisms found in C++ and Modula-3.
 the method function is declared with an explicit first argument representing the object, which is provided 
 implicitly by the call. 
 
+---
 
