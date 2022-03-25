@@ -85,7 +85,7 @@ Instance methods work the same as in ruby. You can call them on an instance but 
     => ['roll over', 'roll over', 'Stand Tall (On Hind Legs)', 'Go and Fetch', 'Sit Pretty', 'Spin', 'Army Crawling', 'Howl', 'Speak', 'Bark', 'Wait']
 ```
 
-> Wow what a well trained dog.
+> Wow what a well trained dog. -- @Laura shows her cute dog for moral support!
 
 - We saved a method into df `df = d.add_trick ` then used it in a while loop later on.
 
