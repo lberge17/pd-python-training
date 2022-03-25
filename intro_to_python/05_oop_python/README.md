@@ -1,6 +1,27 @@
 # Object Oriented Programming With Python
 
-## Creation of a class Python VS Ruby
+Overview:
+
+1. Class Creation Python VS Ruby
+1. Instance Variables vs Class Variables
+1. Instance Methods vs Class Methods
+1. Inheritance
+
+---
+
+## Class Creation Python VS Ruby
+
+<table>
+<tr>
+<th>
+Python
+</th>
+<th>
+Ruby
+</th>
+</tr>
+<tr>
+<td>
 
 ```python
 
@@ -15,6 +36,9 @@ class Dog:
 
 
 ```
+
+</td>
+<td>
 
 ```ruby
 class Dog
@@ -31,6 +55,19 @@ class Dog
 end
 ```
 
+</td>
+</tr>
+<tr>
+<th>
+Python Terminal
+</th>
+<th>
+Ruby Terminal
+</th>
+</tr>
+<tr>
+<td>
+
 ```python
     d = Dog('Fido')
     e = Dog('Buddy')
@@ -40,6 +77,9 @@ end
     e.tricks
 ```
 
+</td>
+<td>
+
 ```ruby
     d = Dog.new('Fido')
     e = Dog.new('Buddy')
@@ -48,6 +88,10 @@ end
     d.tricks
     e.tricks
 ```
+
+</td>
+</tr>
+</table>
 
 > Data attributes correspond to 'instance variables'...
 > Data attributes need not be declared; like local variables,
@@ -59,7 +103,7 @@ end
     => 5
 ```
 
-### Instance Variables vs Class Variables
+## Instance Variables vs Class Variables
 
 ```python
   class Dog:
@@ -81,7 +125,7 @@ end
   'Buddy'
 ```
 
-#### Note on Privacy in Python
+### Note on Privacy in Python
 
 > "nothing in Python makes it possible to enforce data hiding — it is
 > all based upon convention. (On the other hand, the Python
@@ -151,7 +195,7 @@ class C:
 
 - This was pretty cool, until the documentation said this: `"Note that this practice usually only serves to confuse the reader of a program."`
 
-## Lets talk about self
+### Lets talk about self
 
 - You may have noticed that when we defined `d.add_trick(self, name)`it requires two arguments, while when we use it above we only pass it one argument `d.add_trick('roll over')`.
   - The special thing about methods is that the instance object is passed as the first argument in a list of the function.<sup><a href="https://docs.python.org/3/tutorial/classes.html#method-objects">1</a></sup>'
@@ -174,8 +218,10 @@ Lets create a class that uses a class method.
 ```python
 
 class Flatiron:
+
   se_managers = ["Ashlee Scott"]
   se_director = "Ashlee Scott"
+
   def hire(cls):
     if (cls.se_director in cls.se_managers):
       cls.se_managers.append("Laura Berge")
@@ -307,7 +353,7 @@ class SecondClass(FirstClass):
 
 import module_name
 
-class SecondClass (modulename.FirstClass):
+class SecondClass (module_name.FirstClass):
     def display(self): ...
 
 ```
@@ -321,3 +367,22 @@ class SecondClass (modulename.FirstClass):
 1. [Function Decorators in Python](https://www.geeksforgeeks.org/function-decorators-in-python-set-1-introduction/)
 1. [Inheritance in Python](https://www.geeksforgeeks.org/inheritance-in-python/)
 1. [Classes Are Customized by Inheritance](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch27s02.html)
+
+<style>
+  h2{
+    text-align: center;
+  }
+
+  table{
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  table, th, td{
+    border: 3px double;
+  }
+
+  th,td{
+    width: 100%;
+  }
+</style>
