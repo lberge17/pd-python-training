@@ -202,6 +202,72 @@ This is oddly similar to what we had to do with JS OOP and binding function. Bef
 
 ### @classmethod Decorator
 
+A decorator is a function that takes a function as its only parameter and returns a function. <sup><a href="https://www.geeksforgeeks.org/function-decorators-in-python-set-1-introduction/">3</a></sup> We are able to do this because in python we can define a function inside another function and a function can be passed as a parameter to another function.
+
+```python
+"""
+Note: some of the python documentation refer to functions as fun rather than
+func like we are used to.
+"""
+def decorated_function(callback):
+  def add(a,b):
+    return a+b
+
+  return sum # here we are return the function sum
+
+@decorate_function
+def sum(a,b)
+  return (a,b) # def sum(1,2) => (1,2)
+
+
+"""
+The call below is the same thing as if we
+passed the function sum(1,2) into the
+decorated_function. Making it possible to
+call sum directly without the need to
+call the decorator function
+>>> decorated_function(sum(1,2))
+"""
+>>> print(sum(1,2))
+3
+
+```
+
+Luckily python has a built-in function decorator `@classmethod`.
+This comes in really handy when we are talking about classes
+because it allows us to be able to skip a step when we are declaring
+class methods.
+
+We can now use the decorator for the classmethod like so.
+
+```python
+
+class Flatiron:
+  se_managers = ["Ashlee Scott"]
+  se_director = "Ashlee Scott"
+
+  @classmethod
+  def hire(cls):
+    if (cls.se_director in cls.se_managers):
+      cls.se_managers.append("Laura Berge")
+      print("Candidate Hired!")
+      cls.se_managers.remove("Ashlee Scott")
+    else:
+      print("We're okay for now!")
+      print(cls.se_managers)
+### NO LONGER NEEDED ###
+# >>> Flatiron.hire = classmethod(Flatiron.hire)
+### NO LONGER NEEDED ###
+>>> Flatiron.hire()
+Candidate Hired!
+>>> Flatiron.hire()
+"We're okay for now!"
+['Laura Berge']
+
+```
+
+## Inherritance
+
 ---
 
 ## Resources
