@@ -167,9 +167,45 @@ Unlike ruby where we can set class methods using `self.method_name` for python w
     Parameters: accepts a function as a parameter
     Returns: The converted class method.
 
+classmethods can be called by both the class and objects. Similar to class variables. <sup><a href="https://www.geeksforgeeks.org/classmethod-in-python/">2</a></sup>
+
+Lets create a class that uses a class method.
+
+```python
+
+class Flatiron:
+  se_managers = ["Ashlee Scott"]
+  se_director = "Ashlee Scott"
+  def hire(cls):
+    if (cls.se_director in cls.se_managers):
+      cls.se_managers.append("Laura Berge")
+      print("Candidate Hired!")
+      cls.se_managers.remove("Ashlee Scott")
+    else:
+      print("We're okay for now!")
+      print(cls.se_managers)
+
+>>> Flatiron.hire = classmethod(Flatiron.hire)
+>>> Flatiron.hire()
+Candidate Hired!
+>>> Flatiron.hire()
+"We're okay for now!"
+['Laura Berge']
+
+```
+
+This is oddly similar to what we had to do with JS OOP and binding function. Before we invoke a class method we need to bind the class to it using classmethod().
+
+> If you don't bind the class method this is the error you will receive:
+>
+> > `TypeError: hire() missing 1 required positional argument: 'cls'`
+
+### @classmethod Decorator
+
 ---
 
 ## Resources
 
 1. [Classes Python Docs](https://docs.python.org/3/tutorial/classes.html)
 1. [classmethod() in Python](https://www.geeksforgeeks.org/classmethod-in-python/)
+1. [Function Decorators in Python](https://www.geeksforgeeks.org/function-decorators-in-python-set-1-introduction/)
