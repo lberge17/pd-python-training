@@ -266,7 +266,51 @@ Candidate Hired!
 
 ```
 
-## Inherritance
+## Inheritance
+
+Inheritance is handled a bit differently in python. You
+
+```python
+
+class FirstClass:
+  data = ["Everyone", "here","is"]
+
+  def add_data(self, new_data):
+    self.data.appened(new_data)
+
+class SecondClass(FirstClass):
+  def display(self):
+    print('Current Data = "%s"' % self.data)
+
+
+>>> second_instance = SecondClass()
+>>> second_instance.display()
+Current data = "['Everyone', 'here', 'is']"
+>>> second_instance.add_data("awesome")
+>>> second_instance.add_data(".")
+>>> second_instance.data
+['Everyone', 'here', 'is', 'awesome', '.']
+
+
+```
+
+Importing classes <sup><a href="https://www.geeksforgeeks.org/function-decorators-in-python-set-1-introduction/">4</a></sup>
+
+```python
+
+from module_name import FirstClass
+
+class SecondClass(FirstClass):
+  def display(self): ...
+
+---
+
+import module_name
+
+class SecondClass (modulename.FirstClass):
+    def display(self): ...
+
+```
 
 ---
 
@@ -275,3 +319,5 @@ Candidate Hired!
 1. [Classes Python Docs](https://docs.python.org/3/tutorial/classes.html)
 1. [classmethod() in Python](https://www.geeksforgeeks.org/classmethod-in-python/)
 1. [Function Decorators in Python](https://www.geeksforgeeks.org/function-decorators-in-python-set-1-introduction/)
+1. [Inheritance in Python](https://www.geeksforgeeks.org/inheritance-in-python/)
+1. [Classes Are Customized by Inheritance](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch27s02.html)
