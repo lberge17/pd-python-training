@@ -59,6 +59,36 @@ end
     => 5
 ```
 
+### Instance Variables vs Class Variables
+
+```python
+  class Dog:
+
+    kind = 'canine'         # class variable shared by all instances
+
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance
+
+  >>> d = Dog('Fido')
+  >>> e = Dog('Buddy')
+  >>> d.kind                  # shared by all dogs
+  'canine'
+  >>> e.kind                  # shared by all dogs
+  'canine'
+  >>> d.name                  # unique to d
+  'Fido'
+  >>> e.name                  # unique to e
+  'Buddy'
+```
+
+#### Note on Privacy in Python
+
+> "nothing in Python makes it possible to enforce data hiding — it is
+> all based upon convention. (On the other hand, the Python
+> implementation, written in C, can completely hide implementation
+> details and control access to an object if necessary; this can be
+> used by extensions to Python written in C.)"
+
 ## Instance Methods vs Class Methods
 
 Instance methods work the same as in ruby. You can call them on an instance but cannot call them on a class.
